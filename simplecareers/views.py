@@ -15,6 +15,7 @@ class JobVacancyListView(ListView):
 
 class JobVacancyDetailView(DetailView):
 	template_name = 'simplecareers/detail.html'
+	model = models.Vacancy
 
 
 class JobVacancySubmissionView(FormView):

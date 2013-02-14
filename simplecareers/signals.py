@@ -4,16 +4,16 @@ from django.core.urlresolvers import reverse, reverse_lazy
 from django.contrib.sites.models import Site
 
 def send_email(sender, **kwargs):
-	""" Notify careers manager of a new applicant """
+    """ Notify careers manager of a new applicant """
 
-    applicant = kwargs.get("instance")
+    applicant = kwargs.get("instance", None)
     send_to = applicant.vacancy.notify
     if not send_to == None and len(send_to) > 0 and isinstance(send_to, str):
-    	send_to = send_to.split(",")
+        send_to = send_to.split(",")
 
     context = {
-    	"admin_url" : "http://" + Site.objects.get_current().domain + reverse("admin:index"),
-    	"Applicant" : applicant,
+        "admin_url" : "http://" + Site.objects.get_current().domain + reverse("admin:index"),
+        "Applicant" : applicant,
     }
 
     subject = ''.join(render_to_string(

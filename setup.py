@@ -21,7 +21,6 @@ setup(
     ),
     packages=find_packages(),
     install_requires = (
-    	"django-uni-form",
     	"django-classy-tags",
     	"surlex",
     	"south",
