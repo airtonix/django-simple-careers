@@ -20,7 +20,7 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
     ),
     packages=find_packages(),
-    install_requires = [
+    install_requires = (
     	"django-uni-form",
     	"django-classy-tags",
     	"surlex",
