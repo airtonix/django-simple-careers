@@ -2,10 +2,6 @@ from django import forms
 from django.db import IntegrityError
 from django.utils.translation import ugettext_lazy as _
 
-from uni_form.helpers import FormHelper, Submit, Reset
-from uni_form.helpers import Layout, Fieldset, Row, HTML
-from uni_form.helpers import FormHelper, Submit
-
 from . import models
 
 
